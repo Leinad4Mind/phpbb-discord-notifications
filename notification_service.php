@@ -328,6 +328,7 @@ class notification_service
 		curl_setopt($h, CURLOPT_URL, $discord_webhook_url);
 		curl_setopt($h, CURLOPT_POST, 1);
 		curl_setopt($h, CURLOPT_POSTFIELDS, $post);
+		curl_setopt($h, CURLOPT_RETURNTRANSFER, 1);
 		$response = curl_exec($h);
 		curl_close($h);
 
